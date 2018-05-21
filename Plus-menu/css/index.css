@@ -1,0 +1,96 @@
+.hideMenuContainer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: 0.2s;
+  background: #366cc8;
+  overflow: hidden;
+}
+
+.hideMenuContainer.showMenu {
+  transition: 0.4s;
+  background: white;
+  width: 171px;
+  height: 110px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 12px 20px;
+  box-shadow: 0 4px 10px -2px;   
+}
+
+.hideShowButton {
+  background: transparent;
+  color: white;
+  font-size: 42px;
+  border: 0;
+  line-height: 39px;
+  transition: 0.2s;
+  position: absolute;
+  top: 3.5px;
+  right: 0;
+  display: block;
+  width: 50px;
+  cursor: pointer;
+  outline: none;
+  z-index: 20; 
+} 
+
+.hideMenuContainer.showMenu .hideShowButton {
+  color: #7b7b7d;
+  transform: rotate(405deg);
+}
+
+.hideMenu {
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.hideMenuContainer.showMenu .hideMenu {
+  opacity: 1;
+}
+
+.hideMenuList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hideMenuList > li {
+  margin: 0 0 5px 0;
+  transition: 0.4s;
+  transform: translateX(30px);
+}
+
+.hideMenuContainer.showMenu .hideMenuList > li {
+  transform: translateX(0);
+}
+
+.hideMenuList > li:nth-child(1) {
+  transition-delay: 0.06s;
+}
+
+.hideMenuList > li:nth-child(2) {
+  transition-delay: 0.09s;
+}
+
+.hideMenuList > li:nth-child(3) {
+  transition-delay: 0.12s;
+}
+
+.hideMenuListIcon{
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  border-radius: 3px;
+  vertical-align: middle;
+  background: red;
+  position: relative;
+  top: -1px;
+  margin: 0 4px 0 0;
+}
+.hideMenuTitle {
+  margin: 0 0 8px 0;
+}
